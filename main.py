@@ -45,9 +45,7 @@ if "history" not in st.session_state:
     st.session_state["history"] = []
 
 if "generated" not in st.session_state:
-    st.session_state["generated"] = [
-        "안녕하세요! 텍스트 파일에 대해 무엇이든 물어보세요!"
-    ]
+    st.session_state["generated"] = ["안녕하세요! 무엇이든 물어보세요!"]
 
 if "past" not in st.session_state:
     st.session_state["past"] = ["안녕하세요!"]
@@ -64,7 +62,7 @@ with input_container:
     with st.form(key="Conv_Question", clear_on_submit=True):
         user_input = st.text_input(
             "Query:",
-            placeholder="텍스트 파일에 대해 이야기 해볼까요? (:",
+            placeholder="텍스트를 입력해 주세요",
             key="input",
             disabled=st.session_state["loading"],
         )
