@@ -87,7 +87,7 @@ if "loading" in st.session_state and st.session_state["loading"]:
     # 입력 필드와 버튼을 다시 활성화
     st.experimental_rerun()
 
-# LLM이 답변을 해야 하는 경우에 대한 처리
+# LLM 답변 처리
 if st.session_state["generated"]:
     with response_container:
         for i in range(len(st.session_state["generated"])):
